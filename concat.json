@@ -1,0 +1,21 @@
+{
+    "flowsetting.js": [
+        "assets/data/*.js",
+        "modules/common/**/*.js",
+        "modules/action/**/*.js",
+        "modules/entrance/**/*.js",
+        "modules/flowinfo/**/*.js",
+        "modules/setting/**/*.js",
+        "modules/node/**/*.js",
+        "modules/condition/**/*.js",
+        "modules/trigger/**/*.js",
+        "flowsetting.js"
+    ],
+    "flowdetail.js": [
+        "assets/data/*.js",
+        "modules/common/**/*.js",
+        "modules/flowdetail/**/*.js",
+        "modules/trigger/**/*.js",
+        "flowdetail.js"
+    ]
+}

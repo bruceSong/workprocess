@@ -1,0 +1,16 @@
+## if (title) { ##
+    <div class="bpm-dialog-hd">{{title}}</div>
+## } ##
+<div class="bpm-dialog-bd">{{content}}</div>
+<div class="bpm-dialog-btns">
+    ## if (btns != 'none') { ##
+        ## _.each(btns, function(item) { ##
+            ## var cls = item.action == 'cancel' ? 'b-g-btn b-g-btn-cancel' : 'b-g-btn'; ##
+            <span class="{{{{-cls}}}}" action-type="{{{{-item.action}}}}">{{{{-item.label}}}}</span>
+        ## });##
+    ## } ##
+</div>
+
+## if(isClose) {##
+<div class="bpm-dislog-close">×</div>
+## } ##

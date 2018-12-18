@@ -1,0 +1,81 @@
+## if(useToolbar) { ##
+		## var cls = fullScreen ? 'fullScreen' : ''; ##
+		## var text = fullScreen ? $t('关闭') : $t('全屏'); ##
+		<div class="canvas-operate-toolbar">
+			<ul class=" {{cls}}">
+				<li>
+					<i class="svg-full-screen-icon" title="{{text}}">×</i>
+				</li>
+				<li>
+					<i class="svg-zoom-in-icon" title="{{$t('放大')}}"></i>
+				</li>
+				<li>
+					<i class="svg-zoom-out-icon" title="{{$t('缩小')}}"></i>
+				</li>
+				<li>
+					<i class="svg-location-icon" title="{{$t('复原')}}"></i>
+				</li>
+			</ul>
+		</div>
+	## } ##
+<div class="canvas-con">
+    <span class="wf-circle block" node-type="startEvent" id="start"><em>{{$t('开始')}}</em></span>
+    <span class="wf-vertical-line block" node-type="lineTranstion" id="line0"></span>
+    <div class="wf-canvas-con">
+    	## _.each(cavasGates, function(item, index1) { ##
+    		##var num;##
+    		## _.each(item, function(value) { ##
+			##if(value.id.indexOf('nodeAction')>-1){##
+				##num = parseInt(value.id.replace('nodeAction', ''));##
+			##}##
+    		##})##
+		<div class="canvas-div" num="{{num}}">
+			##var t = 0;##
+			## _.each(item, function(value, index) { ##
+				##if(value.type=='exclusiveGateway'){##
+					<div class="wf-rhomb" node-type="exclusiveGateway" id="{{value.id}}">
+						<span class="wf-rhomb-bg"></span>
+						<i class="right-next"></i><i class="bottom-next"></i><em>{{{{-value.name}}}}<span class="error-msg">{{$t('配置错误')}}</span></em>
+						<div class="wf-detail-card"></div>
+					</div>
+				##}##
+				##if(value.fromId){##
+				<span class="wf-horizontal-line ##if(value.fromId.indexOf('nodeGateway')>-1){## mtl##}##" id="{{value.id}}" node-type="lineTranstion" ></span>
+					##if(value.toId.indexOf('nodeEnd')>-1){##
+						##t = 1;##
+					##}##
+				##}##
+				##if(value.type=='executionTask'){##
+				<div class="wf-square" node-type="executionTask" id="{{value.id}}">
+					<em>{{{{-value.name}}}}</em>
+					<span class="error-msg">{{$t('配置错误')}}</span>
+
+			## function filterExecutionLength (execution) { ##
+			## 		var execuArray = ['updates', 'send_qixin', 'external_message', 'trigger_bpm', 'send_email', 'trigger_operation', 'custom_function', 'feed_sales_record', 'feed_schedule', 'feed_task']; ##
+			##		var filterExecution =  _.filter(execution, function(item){ return execuArray.indexOf(item.taskType) > -1;}); ##
+			## 		return filterExecution.length; ##
+			## } ##
+
+			##itemlistLength = filterExecutionLength(value.itemList)##
+			##if(itemlistLength>0){##
+				<i>{{itemlistLength}}</i>
+			##}##
+			
+				<div class="wf-detail-card"></div>
+				</div>
+				##}##
+
+			## }); ##
+			<span class="wf-end-node-circle ##if(!t){## next-icon ##}##" node-type="endEvent" id="nodeEnd{{num}}">
+				##if(t){##
+				<em>{{$t('结束')}}</em>
+				##}else{##
+				<em>{{$t('匹配下一条件')}}</em>
+				 ##}##
+			 </span>
+		</div>
+		<span class="wf-vertical-line block mt28" node-type="lineTranstion" id="{{cavasLins[index1].id}}"></span>
+	## }); ##
+    </div>
+    <span class="wf-end-circle block" node-type="endEvent" id="end"><em>{{$t('结束')}}</em></span>
+</div>

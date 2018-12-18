@@ -1,0 +1,10 @@
+<div class="wk-lock-content ##if(data.isError){## error-action ##}##">
+	<h3 data-action="lock" num="{{data.num}}">
+		{{data.actionName}}
+		<a class="action-close" href="#" ></a>
+		<a href="#" class="action-edit"></a>		
+	</h3>
+	<div class="remind-text">
+		<p>{{data.str[data.actionCode]}}</p>
+	</div>
+</div>

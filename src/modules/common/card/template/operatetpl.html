@@ -1,0 +1,27 @@
+<div class="wk-operate-content ##if(data.isError){## error-action ##}##"">
+	<h3 data-action="operate" num="{{data.num}}">
+		##if(data.actionCode == 'Move'){##{{$t('转移')}}##}else{##{{$t('退回')}}##}##
+		<a class="action-close" href="#"></a>
+		<a href="#" class="action-edit"></a>
+	</h3>
+	<div class="remind-text">
+		##if(data.actionCode == 'Move'){##
+			##var tmp = $t('到{{data.actionName}}',{data:{data:data}}); ##
+			<p>{{tmp}}: {{data.content}}</p>
+		##}else{##
+			##var tmp1 = $t('当数据有所属{{data.dataLabel}}时，退回到{{data.belongTo}}',{data:{data:data}}); ##
+			<p>{{tmp1}};</p>
+			<p>
+				## var tmp2 = $t('当数据无所属{{data.dataLabel}}时',{data:{data:data}});##
+					{{tmp2}}{{$t('时')}},
+				##if(data.unBelongTo){##
+					## var tmp3 = $t('退回到{{data.unBelongTo}}',{data:{data:data}});##
+					{{tmp3}}
+				##}else{##{{$t('不执行退回操作')}}##}##
+			</p>
+			##if(data.reason){##
+			<p>{{$t('退回原因：')}}{{data.reason}}</p>
+			##}##
+		##}##
+	</div>
+</div>

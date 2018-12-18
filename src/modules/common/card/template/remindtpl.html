@@ -1,0 +1,13 @@
+<div  ##if(data.isError){## class="wk-remind-content error-action" ##}else{## class="wk-remind-content" ##}##>
+	<h3 num="{{data.num}}" data-action="remind">{{$t('CRM提醒')}}<a class="action-close" ></a>
+		<a href="#" class="action-edit"></a>
+	</h3>
+	<div class="remind-text">
+		<h4>{{$t('标题')}}</h4>
+		<p>{{data.title}}</p>
+		<h4>{{$t('内容')}}</h4>
+		<p>{{data.content}}</p>
+		<h4>{{$t('提醒人员')}}</h4>
+		<p>{{data.reminder}}</p>
+	</div>
+</div>

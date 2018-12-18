@@ -1,0 +1,201 @@
+.paas-workprocess-variables {
+  position: absolute;
+  top:45px;
+  right:-43px;
+  padding: 15px;
+  width: 270px;
+  border-radius: 3px;
+  background-color: #fff;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, .2), 0 -3px 5px 0 rgba(0, 0, 0, .025);
+  opacity: 1;
+  transition: opacity 300ms linear;
+  z-index: 2997;
+  font-size:14px;
+  text-align:left;
+  font-weight:normal;
+  &.visible {
+    opacity: 1;
+  }
+
+  &::before {
+    @size: 14px;
+    content: '';
+    position: absolute;
+    width: @size;
+    height: @size;
+    top: -@size / 2;
+    right: 48px;
+    background-color: #fff;
+    transform: rotate(45deg);
+  }
+
+  &.top {
+    box-shadow: 0 -5px 10px 0 rgba(0, 0, 0, .2), 0 3px 5px 0 rgba(0, 0, 0, .025);
+    &::before {
+      @size: 14px;
+      top: auto;
+      bottom: -@size / 2;
+      box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, .03);
+    }
+  }
+
+  &.arrow-left::before {
+    right: auto;
+    left: 48px;
+  }
+
+  &.trigger {
+    .var.ref {
+      display: none;
+    }
+  }
+
+  .calc {
+    height:100%;
+    text-align:left;
+    margin-bottom: 15px;
+    .title {
+      font-size: 13px;
+      color: #999;
+    }
+    .symbol {
+      padding-top: 13px;
+      padding-bottom: 16px;
+      height: 16px;
+      border-bottom: 1px solid #eee;
+    }
+    .item {
+      display: inline-block;
+      margin-right: 15px;
+      font-size: 16px;
+      line-height: 16px;
+      color: #3487e2;
+      font-weight: 600;
+      cursor: pointer;
+      &:last-child {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .tabs {
+    height: 35px;
+    border-bottom: 1px solid #eee;
+    box-sizing: border-box;
+    .tab {
+      float: left;
+      margin-right: 10px;
+      padding: 0 10px;
+      height: 33px;
+      // font-size: 14px;
+      color: #999;
+      text-align: center;
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+      transition: border 300ms ease-out;
+      &.current, &:hover {
+        border-bottom-color: #fc923f;
+        color: #333;
+      }
+    }
+  }
+
+  .contents {
+    padding-top: 15px;
+    .content {
+      display: none;
+      &.current {
+        display: block;
+      }
+    }
+  }
+
+  .variables {
+    max-height: 192px;
+    overflow: auto;
+    &.sup,
+    &.sub {
+      float: left;
+      width: 135px;
+      box-sizing: border-box;
+    }
+    &.sup {
+      padding-right: 15px;
+      border-right: 1px solid #eee;
+    }
+    &.sub {
+      padding-left: 15px;
+      display:none;
+      &:empty {
+        &::after {
+          content: '没有可以选择的字段';
+          display: block;
+          color: #ccc;
+          line-height: 32px;
+        }
+      }
+    }
+    &.sub.current{
+      display:block;
+    }
+    .var {
+      padding: 0 15px;
+      height: 32px;
+      line-height: 32px;
+      border-radius: 3px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      cursor: pointer;
+      &.current, &:hover {
+        background-color: #f2f2f2;
+      }
+    }
+  }
+  .formula-label {
+    text-align:left;
+    padding-top: 10px;
+    line-height: 17px;
+    font-size: 13px;
+    color: #333;
+
+    > div {
+      padding-bottom: 12px;
+      padding-top: 15px;
+      border-top: 1px solid #eee;
+      color: #999;
+    }
+    input {
+      width: 0;
+      height: 0;
+      border: none;
+      display: none;
+    }
+    .label {
+      padding: 0 0 0 8px;
+      cursor: pointer;
+      margin-right:20px;
+    }
+    .input {
+      display: inline-block;
+      box-sizing: border-box;
+      width: 16px;
+      height: 16px;
+      border: 1px solid #ddd;
+      border-radius: 50%;
+      vertical-align: middle;
+        cursor: pointer;
+    }
+    dt, dd {
+      display: inline-block;
+    }
+
+    .checked {
+      .input {
+        border: 5px solid #3487e2;
+      }
+    }
+
+  }
+
+}

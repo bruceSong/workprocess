@@ -1,0 +1,63 @@
+<div class="paas-workprocess-variables">
+## if(obj.hasCalc) { ##
+<dl class="calc">
+  <dt class="title">{{$t('运算符')}}</dt>
+  <dd class="symbol">
+    <span class="item" data-type="+">+</span>
+    <span class="item" data-type="-">-</span>
+    <span class="item" data-type="*">×</span>
+    <span class="item" data-type="/">÷</span>
+    <span class="item" data-type="()">()</span>
+  </dd>
+</dl>
+## } ##
+
+
+<nav class="tabs clearfix">  
+  ## _.each(obj.items, function(item, index) { ##
+    <a href="#" class="tab ##if(index=== 0){##current##}##" data-name="{{item.name}}">{{{{-item.label}}}}</li>
+  ## }) ##
+</nav>
+
+<div class="contents">
+## _.each(obj.items, function(item, index) { ##
+  <section class="content clearfix ##if(index=== 0){##current##}##">
+   ##if(item.hasSubVariable){##
+    <ul class="variables sup">
+    ## _.each(item.variables, function(value1, index) { ##
+         <li class="var ##if(index==0){##current ##}##" data-name="{{value1.api_name}}" title="{{value1.display_name}}">{{value1.display_name}}</li> 
+    ##})##
+     </ul>
+    ## _.each(item.variables, function(value1, index) { ##
+      <ul  ##if(index==0){##  class="variables sub current" ##}else{## class="variables sub" ##}##>
+          ## _.each(value1.fields, function(value2) { ##
+          <li class="var sub cal-subvar" data-name="{{value2.api_name}}" title="{{value2.label}}">{{value2.label}}</li>
+           ## }) ##
+      </ul>
+    ##})##
+    ##}else{##
+    <ul class="variables"> 
+      ## _.each(item.variables, function(value1) { ##
+           <li class="var else-subvar" data-name="{{value1.api_name}}" title="{{value1.display_name}}">{{value1.display_name}}</li> 
+      ##})##
+    </ul>
+    ##}##
+  </section>
+## }) ##
+</div>
+
+  ## if(obj.hasCalc) { ##
+  <div class="formula-label">
+    <div>{{$t('公式中数值为空时')}}</div>
+    <label ##if(obj.defaultValue !== '0'){## class="checked" ## } ##>
+        <i class="input"></i>
+        <span class="label">{{$t('默认为空')}}</span>
+    </label>
+    <label ##if(obj.defaultValue == '0'){## class="checked" ## } ##>
+      <i class="input"></i>
+      <span class="label">{{$t('默认为零')}}<span>
+    </label>
+  </div>
+## } ##
+
+</div>

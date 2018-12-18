@@ -1,0 +1,9 @@
+<div class="wk-bpm-content ##if(data.isError){## error-action ##}##">
+	<h3 data-action="bpm" num="{{data.num}}">{{$t('发起业务流程')}}<a class="action-close" href="#" ></a>
+		<a href="#" class="action-edit"></a>
+	</h3>
+	<div class="remind-text">
+		<h4>{{$t('节点完成后')}}</h4>
+		<p>{{$t('触发BPM流程：')}}{{data.sourceworkflowName}}</p>
+	</div>
+</div>

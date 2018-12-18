@@ -1,0 +1,34 @@
+<div class="wk-radio-selector">
+	<ul class="radio-ul">
+	##var readonly = data.readonly ? ' readonly' : '';##
+	##var isCloseBtn = false;##
+	##_.each(data.options,function(item){##
+		<li data-value="{{{{-item.value}}}}" data-label="{{{{-item.label}}}}" ##if(item.value==data.value){## class='radio-li current {{readonly}}'##}else{## class="radio-li {{readonly}}" ##}## >
+			<em class="radio-icon"></em>
+			<span class="radio-txt">{{{{-item.label}}}}</span>
+			##if(item.appTxt){##
+				<a href="#"  ##if(item.value==data.value && !data.subRelationType){## class="app-text-link" ##}else{## class="app-text-link current-link" ##}## >{{item.appTxt}}</a>
+			##}##
+			##if(data.appTxt){##
+				<a href="#"  class="app-text-link">{{data.appTxt}}</a>
+			##}##
+			##if(item.tiptxt){##
+				<span class="radio-tips"><em>?</em><i>{{item.tiptxt}}</i></span>
+			##}##
+			##if(item.isShowHelp){##
+				##isCloseBtn = true;##
+				<div class="{{item.isShowHelp}}">
+					<div class="is-show-help-btn"></div>
+					##if(item.isShowHelp=='showTimeHelp'){##
+						<div class="is-show-help-con">{{$t('选择日期或时间的字段后，可配置在其之前')}}／{{$t('之后的小时、天、周、月，触发执行工作流。')}}</div>
+					##}##
+				</div>
+			##}##
+		</li>
+	##});##
+	</ul>
+	##if(isCloseBtn){##
+	<div class="closeHelp">
+		<em>×</em>{{$t('关闭')}}</div>
+	##}##
+</div>

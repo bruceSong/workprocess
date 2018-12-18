@@ -1,0 +1,11 @@
+node_modules
+dev
+build
+.idea
+*-html.js
+all.css
+all*.png
+.DS_Store
+*.log**
+local/**
+html*/**

@@ -1,0 +1,37 @@
+<div class="wk-radio-selector">
+	<ul class="radio-ul">
+	##var readonly = data.readonly ? ' readonly' : '';##
+	##var isCloseBtn = false;##
+	##_.each(data.options,function(item){##
+		<li data-value="{{{{-item.value}}}}" data-label="{{{{-item.label}}}}" ##if(item.value==data.value){## class='radio-li current {{readonly}}'##}else{## class="radio-li {{readonly}}" ##}## >
+			<em class="radio-icon"></em>
+			<span class="radio-txt">{{{{-item.label}}}}</span>
+			##if(item.appTxt){##
+				<a href="#"  ##if(item.value==data.value && !data.subRelationType){## class="app-text-link" ##}else{## class="app-text-link current-link" ##}## >{{item.appTxt}}</a>
+			##}##
+			##if(data.appTxt){##
+				<a href="#"  class="app-text-link">{{data.appTxt}}</a>
+			##}##
+			##if(item.tiptxt){##
+				<span class="radio-tips"><em>?</em><i>{{item.tiptxt}}</i></span>
+			##}##
+			##if(item.isShowHelp){##
+				##isCloseBtn = true;##
+				<div class="{{item.isShowHelp}}">
+					<div class="is-show-help-btn"></div>
+					##if(item.isShowHelp=='showUpdateHelp'){##
+						<div class="is-show-help-con">当客户或订单的字段变更即可触发工作流，还可精确到某些字段变更。</div>
+					##}else{##
+						<div class="is-show-help-con">循环触发可支持在每天、每周或每月的某个时间都触发这个工作流了。</div>
+					##}##
+				</div>
+			##}##
+		</li>
+	##});##
+	</ul>
+	##if(isCloseBtn){##
+	<div class="closeHelp">
+		<em>×</em>关闭
+	</div>
+	##}##
+</div>

@@ -1,0 +1,32 @@
+## var optionObj = {}; ##
+## _.each(data.value, function(v) { ##
+    ## optionObj[v] = 1; ##
+## }) ##
+## var readonlyCls = data.readonly ? ' bpm-readonly' : '' ;##
+##var isActive = false;##
+##var labels =[];##
+##labels = _.keys(optionObj);##
+<div class="select_many_list">
+	<div class="bpm-text">
+	##if (labels.length > 0) {##
+		## _.each(labels, function(value, index) { ##
+			##var t = '、';##
+			##if(index==labels.length-1){##
+				##t = '';##
+			##}##
+			##var tmp = _.findWhere(data.options, { value: value});##
+			<span>{{tmp.label}} {{t}}<span>
+		## }); ##
+            ##} else {##
+                <span>请选择<span>
+            ##}##
+	</div>
+	<div class="select_many_ul">
+		## _.each(data.options, function(option, index) { ##
+		    <div class="select_many">
+		        ## var activeCls = optionObj[option.value] ? 'active' : ''; ##
+		        <span class="{{{{-activeCls}}}}{{readonlyCls}}" data-value="{{{{-option.value}}}}" data-label={{option.label}}>{{{{-option.label}}}}</span>
+		    </div>
+		## }); ##
+	</div>
+</div>

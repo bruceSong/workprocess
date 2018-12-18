@@ -1,0 +1,66 @@
+<div class="paas-workprocess-entrance paas-flow-form">
+    <div class="workprocess-form">
+        <div class="work-entrace-title">{{$t('基本信息')}}</div>
+        <div class="work-entrace-con overHeight">
+            <div class="work-entrace-con-left">
+                <div class="item-label"><em>*</em>{{$t('工作流名称')}}</div>
+                <div class="item-input-name"></div>
+                <div class="item-label"><em>*</em>{{$t('API名称')}}</div>
+                <div class="item-input-api">
+                    <div class="item-input-sourceWorkflowId"></div>
+                    <div class="app-name">__crmwf</div>
+                </div>
+            </div>
+            <div class="work-entrace-con-right">
+                <div class="item-label">{{$t('工作流描述')}}</div>
+                <div class="item-input-description"></div>
+            </div>
+        </div>
+        <div class="work-entrace-title obj-margin">{{$t('在什么对象下触发？')}}</div>
+        <div class="work-entrace-con">
+            <div class="work-entrace-con-left">
+                <div class="item-label"><em>*</em>{{$t('请选择对象')}}</div>
+                <div class="pass-trigger-con2"></div>                
+            </div>
+        </div>
+        
+        <!--ul>
+            ## _.each(data, function(item) { ##
+                <li id="{{{{-item.name}}}}">
+                    <div class="item-label">
+                        ## if (item.required) { ##<em>*</em>## } ##
+                        <span>{{{{-item.label}}}}</span>
+                    </div>
+                    <div class="item-wrapper"></div>
+                    ## if (item.name=='sourceWorkflowId') { ##
+                    <div class="app-name">__crmwf</div>
+                    ## } ##
+                </li>
+            ## }); ##
+            <li>
+            </li>
+        </ul-->
+        <!--div>
+            <div class="item-label"><em>*</em><span>{{$t('在什么对象下触发？')}}</span></div>
+            <div class="item-wrapper"></div>
+        </div-->
+        <div class="pass-workprocess-heshi">
+            <div class="work-entrace-title">{{$t('何时触发此工作流？')}}</div>
+            <div class="pass-trigger-con"></div>            
+        </div>
+        <div class="pass-worprocess-operator trigger-operator">
+            <div class="pass-worprocess-label"><em>*</em>{{$t('触发操作')}}</div><div class="pass-trigger-con3"></div>
+        </div>
+        <div class="pass-worprocess-operator trigger-round">
+            <div class="pass-trigger-con4">
+
+            </div>
+        </div>
+        <div class="pass-worprocess-operator trigger-fixed">
+            <div class="pass-trigger-con6">
+
+            </div>
+        </div>
+        <div class="paas-flow-filter paas-workprocess-filter-condition"></div>
+    </div>
+</div>

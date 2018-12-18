@@ -1,0 +1,21 @@
+<div class="wk-task-content ##if(data.isError){## error-action ##}##">
+    <h3 data-action="task" num="{{data.num}}">{{$t('任务')}}<a class="action-close" href="#"></a>
+        <a href="#" class="action-edit"></a>
+    </h3>
+    <div class="remind-text">
+        <h4>{{$t('标题')}}</h4>
+        <p>{{data.title}}</p>
+        <h4>{{$t('内容')}}</h4>
+        <p>{{data.content}}</p>
+        <h4>{{$t('截至日期')}}</h4>
+        <p>{{data.deadLineString}}</p>
+        <h4>{{$t('分配给谁')}}</h4>
+        <p>{{data.attenderEmployeeIdStr.join(',')}}</p>
+        <h4>{{$t('提醒')}}</h4>
+        <p>{{data.remindArr.join(',')}}</p>
+        ##if(data.copystr){##
+        <h4>{{$t('抄送范围')}}</h4>
+        <p>{{data.copystr}}</p>
+        ##}##
+    </div>
+</div>

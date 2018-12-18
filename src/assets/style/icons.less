@@ -1,0 +1,96 @@
+@import "./variable";
+
+@paas-bpm-icon-size: 24px;
+.paas-bpm-flow-icon {
+  width: @paas-bpm-icon-size;
+  height: @paas-bpm-icon-size;
+  display: inline-block;
+  vertical-align: middle;
+  top: -2px;
+  position: relative;
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  &.approval-icon {
+    background-image: url("@{images-sprite}/flow/icons/approval.png");
+  }
+  &.multi-approval-icon {
+    background-image: url("@{images-sprite}/flow/icons/multi-approval.png");
+  }
+  &.business-icon {
+    background-image: url("@{images-sprite}/flow/icons/business.png");
+  }
+  &.end-icon {
+    background-image: url("@{images-sprite}/flow/icons/end.png");
+  }
+  &.gateway-icon {
+    background-image: url("@{images-sprite}/flow/icons/gateway.png");
+  }
+  &.key-business-icon {
+    background-image: url("@{images-sprite}/flow/icons/key-business.png");
+  }
+  &.stage-icon {
+    background-image: url("@{images-sprite}/flow/icons/stage.png");
+  }
+  &.start-icon {
+    background-image: url("@{images-sprite}/flow/icons/start.png");
+  }
+  &.parallel-icon {
+    background-image: url("@{images-sprite}/flow/icons/parallel.png");
+  }
+  &.line-icon {
+    background-image: url("@{images-sprite}/flow/icons/line.png");
+  }
+  &.polyline-icon {
+    background-image: url("@{images}/flow/icons/polyline.png");
+  }
+  &.redo-icon {
+    background-image: url("@{images-sprite}/flow/icons/redo.png");
+  }
+  &.undo-icon {
+    background-image: url("@{images-sprite}/flow/icons/undo.png");
+  }
+  &.pointer-icon {
+    background-image: url("@{images-sprite}/flow/icons/pointer.png");
+  }
+  &.move-icon {
+    background-image: url("@{images-sprite}/flow/icons/move.png");
+  }
+  &.zoom_in-icon {
+    background-image: url("@{images-sprite}/flow/icons/zoom_in.png");
+  }
+  &.zoom_out-icon {
+    background-image: url("@{images-sprite}/flow/icons/zoom_out.png");
+  }
+  &.trash-icon {
+    background-image: url("@{images-sprite}/flow/icons/trash.png");
+  }
+  &.add-icon:before {
+    content: "\e905";
+    font-size: 22px;
+  }
+  &.progress-icon {
+    background-image: url("@{images-sprite}/flow/icons/current.png");
+  }
+  &.timeout-icon {
+    background-image: url("@{images-sprite}/flow/icons/timeout.png");
+  }
+  &.flow-icon {
+    background-image: url("@{images-sprite}/flow.png");
+  }
+  &.svg-zoom-in-icon {
+    background-image: url("@{images-sprite}/flow/svg/zoom_in.png");
+  }
+  &.svg-zoom-out-icon {
+    background-image: url("@{images-sprite}/flow/svg/zoom_out.png");
+  }
+  &.svg-location-icon {
+    background-image: url("@{images-sprite}/flow/svg/location.png");
+  }
+}

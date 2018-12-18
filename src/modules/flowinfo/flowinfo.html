@@ -1,0 +1,17 @@
+ <div class="process-title">
+	<div class="h2"><span class="left">{{{{-data.name}}}}</span></div>
+	<p class="sub-title">{{{{-data.sourceWorkflowId}}}}</p>
+	<p class="wk-description">{{{{-data.description}}}}</p>
+</div>
+<div class="process-edit">
+	<h2>{{$t('触发条件')}}</h2>
+	<p>
+		<span class="bold">{{$t('当')}}&nbsp;{{{{-data.entityName}}}}</span>
+			##if(data.triggerTypeLabels){##
+			##var length = data.triggerTypeLabels.length;##
+			## _.each(data.triggerTypeLabels, function(option, index) { ##
+				<span class="bold">{{{{-option}}}}</span>##if(length-1 > index){##  <em>{{$t('、')}}</em>##}##  
+			## }); ##
+			 &nbsp;{{$t('时，触发此工作流。')}}##}##
+	</p>
+</div>

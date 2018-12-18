@@ -1,0 +1,13 @@
+<div class="wk-email-content ##if(data.isError){## error-action ##}##">
+	<h3 data-action="email" num="{{data.num}}">{{$t('邮件')}}<a class="action-close" href="#" ></a>
+		<a href="#" class="action-edit"></a>
+	</h3>
+	<div class="remind-text">
+		<h4>{{$t('发件人')}}</h4>
+		<p>{{data.sender}}</p>
+		<h4>{{$t('收件人')}}</h4>
+		<p>{{data.email}}<span class="labels">{{data.emailStr}}</span></p>
+		<h4>{{$t('邮件模板')}}</h4>
+		<p>{{data.title}}</p>
+	</div>
+</div>

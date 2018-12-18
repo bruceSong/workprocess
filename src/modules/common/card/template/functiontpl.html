@@ -1,0 +1,12 @@
+<div class="wk-function-content ##if(data.isError){## error-action ##}##">
+	<h3 data-action="function" num="{{data.num}}">{{$t('自定义函数')}}<a class="action-close" href="#" ></a>
+		<a href="#" class="action-edit"></a>
+	</h3>
+	<div class="remind-text">
+		<h4>{{$t('函数名称')}}</h4>
+		<p>{{data.function_name}}</p>
+		##if(data.function_remark){##
+		<h4>{{$t('函数描述')}}</h4>
+		<p>{{data.function_remark}}</p></div>
+		##}##
+</div>

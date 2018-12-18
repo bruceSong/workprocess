@@ -1,0 +1,53 @@
+
+ ## _.each(cavasGates, function(item, index) { ##
+ <span class="wf-biaozhun-line"></span>
+<div class="canvas-div" draggable="true" num="{{num}}">
+	<span class="node-sort" ></span>
+	##var t = 0;##
+	## _.each(item, function(value, index) { ##
+
+		##if(value.type=='exclusiveGateway'){##
+		<span class="wf-rhomb" node-type="exclusiveGateway" id="{{value.id}}">
+			<span class="wf-rhomb-bg"></span>
+			<i class="right-next"></i><i class="bottom-next"></i><em><strong>{{{{-value.name}}}}</strong><span class="error-msg">{{$t('配置错误')}}</span></em>
+		</span>
+		##}##
+
+		##if(value.fromId){##
+		<span class="wf-horizontal-line ##if(value.fromId.indexOf('nodeGateway')>-1){## mtl##}##" id="{{value.id}}" node-type="lineTranstion" ></span>
+			##if(value.toId.indexOf('nodeEnd')>-1){##
+				##t = 1;##
+			##}##
+		##}##
+
+		##if(value.type=='executionTask'){##
+		<span class="wf-square" node-type="executionTask" id="{{value.id}}">
+			<em>{{{{-value.name}}}}</em>
+			<span class="error-msg">{{$t('配置错误')}}</span>
+			## function filterExecutionLength (execution) { ##
+			## 		var execuArray = ['updates', 'send_qixin', 'external_message', 'trigger_bpm', 'send_email', 'trigger_operation', 'custom_function', 'feed_sales_record', 'feed_schedule', 'feed_task']; ##
+			##		var filterExecution =  _.filter(execution, function(item){ return execuArray.indexOf(item.taskType) > -1;}); ##
+			## 		return filterExecution.length; ##
+			## } ##
+
+			##itemlistLength = filterExecutionLength(value.itemList)##
+			##if(itemlistLength>0){##
+				<i>{{itemlistLength}}</i>
+			##}##
+		</span>
+		##}##
+
+	## }); ##
+		<span class="wf-end-node-circle ##if(!t){## next-icon ##}##" node-type="endEvent" id="nodeEnd{{num}}">
+		##if(t){##
+		<em>{{$t('结束')}}</em>
+		##}else{##
+		<em>{{$t('匹配下一条件')}}</em>
+		 ##}##
+
+		<span class="node-select-list" on="1"><span class="select-ul"><a href="#" ##if(t){##class="current" ##}##>{{$t('结束')}}</a><a href="#" ##if(!t){##class="current" ##}##>{{$t('匹配下一条件')}}</a></span></span></span>
+
+	<a class="node-close" href="#" ></a>
+</div>
+<span class="wf-vertical-line block mt28" node-type="lineTranstion" id="{{cavasLins[index].id}}"></span>
+## }); ##

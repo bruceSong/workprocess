@@ -1,0 +1,30 @@
+define(function() {
+    return [{
+        'label': $t('事件发生时'),
+        'value': 2
+    }, {
+        'label': $t('5分钟前'),
+        'value': 3
+    }, {
+        'label': $t('15分钟前'),
+        'value': 4
+    }, {
+        'label': $t('30分钟前'),
+        'value': 5
+    }, {
+        'label': $t('1小时前'),
+        'value': 6
+    }, {
+        'label': $t('2小时前'),
+        'value': 7
+    }, {
+        'label': $t('1天前'),
+        'value': 8
+    }, {
+        'label': $t('2天前'),
+        'value': 9
+    }, {
+        'label': $t('1周前'),
+        'value': 10
+    }];
+})

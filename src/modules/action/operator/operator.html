@@ -1,0 +1,31 @@
+<div class="wk-action-operator workprocess-form paas-flow-form">
+	<p>{{$t('选择操作类型：')}}</p>
+	<div class="wk-action-selector"></div>
+	<div class="wk-back-con">
+		<div class="wk-back-selector">
+			## var tmp = $t('当数据有所属{{data.dataLabel}}时：',{data:{data:data}});##
+			<p>{{tmp}}</p>
+			<div class="has-data-con">
+				
+			</div>
+		</div>
+		<div class="wk-back-selector">
+			## var tmp1 = $t('当数据无所属{{data.dataLabel}}时：',{data:{data:data}});##
+			<p>{{tmp1}}</p>
+			<div class="no-data-con">
+				
+			</div>
+		</div>
+		<div class="wk-back-selector back-list">
+			<p>{{$t('选择退回原因：')}}</p>
+			<div class="back-result-con">
+				
+			</div>
+		</div>
+	</div>
+	## var tmp2 = $t('选择目标{{data.dataLabel}}：',{data:{data:data}});##
+	<div class="wk-sea-con">
+		<p>{{tmp2}</p>
+		<div class="wk-sea-selector"></div>
+	</div>
+</div>

@@ -1,0 +1,17 @@
+<div class="workprocess-form paas-flow-form">
+	<div class="process-property">
+		<div class="process-property-item">
+			
+		</div>
+		<div class="process-fields-div"><a class="add-process-fields" href="#">+{{$t('添加字段变更')}}</a></div>
+		<div class="process-fields-info">
+			<!--p class="bold">*注意 作废触发的流程，字段更新不执行</p-->
+			<p>{{$t('当字段变更后的值不符合规则或者出现异常时，则该字段不变更。')}}</p>
+			<p>{{$t('例如：')}}</p>
+			<p>1.{{$t('将必填字段变更为空时，则该字段不变更。')}}</p>
+			<p>2.{{$t('字段A变更为字段B除以字段C（C值')}}={{$t('0）时，则字段A不变更。')}}</p>
+			<p>3.{{$t('整数字段A最大支持14位，计算结果超过14位，无法赋值，则该字段A不变更。')}}</p>
+			<p>4.{{$t('当字段出现某些逻辑异常时，则该字段A不变更，并且通知CRM管理员更改计算公式。')}}</p>
+		</div>
+	</div>
+</div>

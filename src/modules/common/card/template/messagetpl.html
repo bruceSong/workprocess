@@ -1,0 +1,26 @@
+<div class="wk-wechat-content ##if(dataTpl.isError){## error-action ##}##">
+	<h3 data-action="wechat" num={{dataTpl.num}}>{{$t('外部通知')}}<a class="action-close" href="#" ></a>
+		<a href="#" class="action-edit" ></a>
+	</h3>
+	<div class="remind-text">
+		<h4>{{$t('标题')}}</h4>
+		<p>{{dataTpl.title}}</p>
+		<h4>{{$t('内容')}}</h4>
+		<p>{{dataTpl.content}}</p>
+		## if(!_.isEmpty(dataTpl.remindPerson)) { ##
+			<h4>{{$t('提醒人员')}}</h4>
+			<p>{{dataTpl.remindPerson}}</p>
+		## } ##
+		## if(!_.isEmpty(dataTpl.objectFieldLabel)) { ##
+            <h4>{{$t('下游企业匹配的字段')}}</h4>
+            <p>{{dataTpl.objectFieldLabel}}</p>
+        ## } ##
+        ## if(!_.isEmpty(dataTpl.rolesLabel)) { ##
+            <h4>{{$t('外部角色')}}</h4>
+            <p>{{dataTpl.rolesLabel}}</p>
+        ## } ##
+		<h4>{{$t('跳转链接')}}</h4>
+		<p>{{dataTpl.forwardName}}</p>
+		<h4>{{$t('互联应用')}}</h4>
+		<p>{{dataTpl.appName}}</p>
+</div>

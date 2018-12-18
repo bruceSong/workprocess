@@ -1,0 +1,18 @@
+<div class="wk-field-content ##if(data.isError){## error-action ##}##">
+	<h3 data-action="field" num="{{data.num}}">{{$t('字段变更')}}<a class="action-close" href="#" ></a>
+		<a href="#" class="action-edit"></a>
+	</h3>
+    <div class="remind-text">
+        <h4>{{$t('节点完成后')}}</h4>
+        ## _.each(data.updateField, function(item) { ##
+            <p>
+                ## _.each(item, function(item2,index) { ##
+                    {{item2}}
+                    ##if(index==0){##
+                        <span class="var-span">{{$t('变更为')}}</span>
+                    ##}else if(item.length-1 > index){##{{$t('、')}}##}##
+                ## }); ##
+            </p>
+        ## }); ##
+    </div>
+</div>

@@ -1,0 +1,307 @@
+.paas-workprocess-entrance {
+    width:1024px;
+    margin: 0 auto;
+    padding: 40px 0;
+    .error-msg{
+        color: #f5715f;
+    }
+    .work-entrace-title{
+        width:100%;
+        font-size: 20px;
+        color: #181c25;
+        clear:both;
+        margin-bottom:23px;
+    }
+    .obj-margin{
+        margin:60px 0 20px 0;
+    }
+    .obj-margin{
+        margin:60px 0 20px 0;
+    }
+    .overHeight{
+        overflow:hidden;
+    }
+    .work-entrace-con{
+        width:100%;
+        height:100%;
+        clear:both;
+        .item-label {
+            width: 140px;
+            line-height: 35px;
+            margin-top:7px;
+            font-size:13px;
+            em {
+                display: inline-block;
+                width: 13px;
+                color: #f5715f;
+            }
+        }
+        .work-entrace-con-left{
+            float:left;
+            width:480px;
+            .item-input-api{
+                position:relative;
+                .app-name{
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    width: 100px;
+                    height: 34px;
+                    line-height: 34px;
+                    background: #eee;
+                    text-align: center;
+                }             
+            }
+
+        }
+        .work-entrace-con-right{
+            float:right;
+            width:480px;
+            .item-input-description{
+                height:135px;
+                line-height:30px;
+                .flow-long_text{
+                    height:104px;
+                }
+            }
+        }
+    }
+    .wk-radio-selector .radio-ul{
+        display:inline-block;
+        .radio-li{
+            display:inline-block;
+            &:hover{
+                background:none;
+            }
+            .radio-tips{
+                margin-left:2px;
+                cursor:pointer;
+                z-index:2;
+                em{
+                    -webkit-transform:scale(0.9,0.9);
+                    -moz-transform:scale(0.9,0.9);
+                    display:inline-block;
+                }
+                i{
+                    position:absolute;
+                    left:0;
+                    top:-35px;
+                    width:auto;
+                    height:25px;
+                    line-height:25px;
+                    border-radius:3px;
+                    background:rgba(33,43,53,.9);
+                    color:#fff;
+                    padding:0 10px;
+                    font-style:normal;
+                    font-size:12px;
+                    display:none;
+                    cursor:pointer;
+                    text-align:center;
+                    -webkit-transform: translateX(-50%);
+                    white-space:nowrap;
+                }
+                i:before{
+                  position:absolute;
+                  top:25px;
+                  left:50%;
+                  width:0;
+                  height:0;
+                  border-left:6px solid transparent;
+                  border-right:6px solid transparent;
+                  border-top:6px solid rgba(33,43,53,.9);
+                  font-weight:400;
+                  content:"";
+                }
+                &:hover{
+                    i{
+                        display:inline-block;
+                    }
+                }
+            }
+        }
+    }
+    .pass-workprocess-heshi{
+        width:480px;
+        padding-top:65px;
+        clear:both;
+        display:none;
+        .work-entrace-title{
+            margin-bottom:10px;
+        }
+    }
+    .pass-entrace-title{
+        height:35px;
+        line-height:35px;
+        clear:both;
+        em {
+            display: inline-block;
+            width: 13px;
+            color: #f5715f;
+        }
+    }
+
+    .pass-trigger-con{
+        clear:both;
+        .radio-ul {
+            display: -webkit-box;  
+            display: -webkit-flex;  
+            display: -ms-flexbox;  
+            display: flex;   
+            -webkit-box-pack: justify;  
+            -webkit-justify-content: space-between;  
+            -ms-flex-pack:justify;  
+            justify-content: space-between;
+            li{
+                padding:0 10px 0 0;
+            }
+        }
+    }
+    .pass-worprocess-operator{
+        width:480px;
+        clear:both;
+        height:100%;
+        margin:10px 0;
+        display:none;
+        .pass-worprocess-label{
+            height:35px;
+            line-height:35px;
+            em {
+                display: inline-block;
+                width: 13px;
+                color: #f5715f;
+            }           
+        }
+        .error-msg{
+            position:relative;
+            left:0;
+            top:0;
+            color: #f5715f;
+        }
+        .pass-trigger-con1{
+          float:left;
+          width:140px;
+        }
+
+        .pass-trigger-con3{
+            position:relative;
+            line-height:34px;
+        }
+        .pass-trigger-con5{
+            float:left;
+            position:relative;
+            width:200px; 
+        }
+    }
+    .trigger-fixed{
+        width:655px;
+    }
+    .trigger-time{
+        display:none;
+    }
+    .trigger-round{
+        display:none;
+    }
+    .paas-workprocess-filter-condition{
+        clear:both;
+    }
+    .showTimeHelp{
+        position: absolute;
+        left: 100%;
+        top: -27px;
+        width: 257px;
+        height: 90px;
+        color:#fff;
+        line-height:25px;
+        z-index:2;
+        margin-left:10px;
+        display:none;
+        .is-show-help-btn{
+            position:relative;
+            float:left;
+            top:50%;
+            width:15px;
+            height:1px;
+            background-color: #319bf5;
+            display:block;      
+        }
+        .is-show-help-btn::after{
+            width:16px;
+            height:16px;
+            opacity: 0.5;
+            background: #319bf5;
+            display:block;
+            content:'';
+            border-radius:50%;
+            position: absolute;
+            top: -8px;
+            left: -12px;
+        }
+        .is-show-help-btn::before{
+            width:8px;
+            height:8px;
+            background: #319bf5;
+            display:block;
+            border-radius:50%;
+            content:'';
+            position: absolute;
+            top: -4px;
+            left: -8px;
+        }
+        .is-show-help-con{
+            float:left;
+            position:relative;
+            width: 233px;
+            height: 78px;
+            border-radius:6px;
+            background-color:#319bf5;
+            line-height: 24px;
+            -webkit-box-shadow:0 4px 4px 0 rgba(1,66,121,.2);
+            box-shadow:0 4px 4px 0 rgba(1,66,121,.2);
+            padding: 7px 10px 0 15px; 
+            margin-left:15px;
+        }
+        .is-show-help-con::before{
+              width:3px;
+              height:12px;
+              background-color:#fff;
+              display:none;
+              content:"";
+              position: absolute;
+              left: 8px;
+              top: 13px;
+        }
+    }
+    .wk-radio-selector{
+        position: relative;
+        .closeHelp{
+            position: absolute;
+            left: 50%;
+            top: 200px;
+            width: 180px;
+            height: 48px;
+            line-height:48px;
+            color:#fff;
+            font-size:16px;
+            opacity: 0.9;
+            border-radius: 24px;
+            background-color: #fc923f;
+            box-shadow: 0 4px 4px 0 rgba(203, 94, 10, 0.3);
+            z-index:2;
+            margin-left:-94px;
+            cursor:pointer;
+            text-align:center;
+            display:none;
+            em{
+                font-size: 28px;
+                position: relative;
+                margin: -7px 5px 0 0;
+                vertical-align: middle;
+                display: inline-block;
+            }
+        }
+    }
+}
+#sourceWorkflowId .item-wrapper{
+    margin-right:98px;
+}

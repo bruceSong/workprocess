@@ -1,0 +1,31 @@
+<div class="clue-select">
+	<div class="ul">
+		<div class="li ##if(data.type==0){## current##}##">
+		<span ##if(data.isTxt==1){## class="li-span" ##}else{## class="li-span gray" ##}##>
+		##var tmp1 = $t('退回到指定{{data.dataLabel}}',{data:{data:data}});##
+		##if(data.type==0){##
+			##if(data.isTxt==1){##{{$t('不执行退回操作')}}##}else{##
+				##var tmp = $t('退回其所属{{data.dataLabel}}',{data:{data:data}});##
+				{{tmp}}
+			##}##
+		##}else if(data.type==1){##
+			##if(data.isTxt==1){##{{$t('不执行退回操作')}}##}else{##
+				{{tmp1}}
+			##}##
+		##}##
+		</span>
+		</div>
+		##if(data.isTxt==1){##
+			##var tmp2 = $t('请选择目标{{data.dataLabel}}',{data:{data:data}});##
+			<div class="li ##if(data.type==1){## current##}##"><span class="li-span left">{{tmp1}}{{$t('：')}}</span>
+				<div class="cule-selecotr">
+					<div class="bpm-select_one bpm-readonly">
+					<div class="bpm-text">
+						<input type="text" readonly="readonly" value="{{tmp2}}" class="">
+					</div>
+					</div>
+				</div>
+			</div>
+		##}##
+	</div>
+</div>

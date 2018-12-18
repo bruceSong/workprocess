@@ -1,0 +1,8 @@
+<div class="wk-manager-content ##if(data.isError){## error-action ##}##">
+	<h3 data-action="manager" num="{{data.num}}">{{$t('分配给负责人')}}<a class="action-close" ></a>
+        <a href="#" class="action-edit"></a>
+	</h3>
+	<div class="remind-text">
+		<p>{{$t('分配给：')}}{{data.person}}</p>
+	</div>
+</div>

@@ -1,0 +1,13 @@
+<div class="wk-feed-content ##if(data.isError){## error-action ##}##">
+	<h3 data-action="feed" num="{{data.num}}">{{$t('销售记录')}}<a class="action-close" href="#" ></a>
+		<a href="#" class="action-edit"></a>
+	</h3>
+	<div class="remind-text">
+		<h4>{{$t('内容')}}</h4>
+		<p>{{data.content}}</p>
+		<h4>{{$t('类型')}}</h4>
+		<p>{{data.tagName}}</p>
+		<h4>{{$t('抄送范围')}}</h4>
+		<p>{{data.copyStr}}</p>
+	</div>
+</div>

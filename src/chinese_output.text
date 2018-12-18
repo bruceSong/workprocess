@@ -1,0 +1,476 @@
+
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/assets/data/filter.js
+    等于
+    不等于
+    包含
+    不包含
+    为空
+    不为空
+    等于
+    不等于
+    大于
+    小于
+    大于等于
+    小于等于
+    为空
+    不为空
+    等于
+    不等于
+    为空
+    不为空
+    包含
+    不包含
+    为空
+    不为空
+    是
+    否
+    为空
+    不为空
+    等于
+    不等于
+    早于
+    晚于
+    为空
+    不为空
+    等于
+    不等于
+    早于
+    晚于
+    等于
+    不等于
+    包含
+    不包含
+    为空
+    不为空
+    属于
+    不属于
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/assets/data/scheduleData.js
+    开始时
+    5分钟前
+    15分钟前
+    30分钟前
+    1小时前
+    2小时前
+    开始当天
+    1天前
+    2天前
+    1周前
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/assets/data/selectorData.js
+    数据负责人
+    团队成员
+    数据负责人上级
+    数据团队成员上级
+    数据负责人所在主部门负责人
+    数据相关团队成员所在主部门负责人
+    工作流发起人
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/assets/data/variables.js
+    对象及字段
+    变量
+    工作流触发时间
+    流程发起人
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/flowsetting.js
+    `${action}${value}工作流`
+    编辑工作流
+    新建工作流
+    编辑
+    新建
+    提示
+    确 定
+    取 消
+    确认关闭吗？
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/action/bpm/bpm.html
+    选择要发起的业务流程：
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/action/bpm/bpm.js
+    发起业务流程
+    业务流程
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/action/field/components/relateitem/relateitem.html
+    变更为
+    请选择
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/action/field/components/relateitem/relateitem.js
+    `字段${fieldData.label}的上级字段${fieldDataParent.label}没有填写完整`
+    确定
+    提示
+    ，
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/action/field/field.html
+    添加字段变更
+    当字段变更后的值不符合规则或者出现异常时，则该字段不变更。
+    例如：
+    将必填字段变更为空时，则该字段不变更。
+    字段A变更为字段B除以字段C（C值
+    0）时，则字段A不变更。
+    整数字段A最大支持14位，计算结果超过14位，无法赋值，则该字段A不变更。
+    当字段出现某些逻辑异常时，则该字段A不变更，并且通知CRM管理员更改计算公式。
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/action/field/field.js
+    字段变更
+    提示
+    确定
+    最多添加10个字段
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/action/lock/lock.js
+    数据锁定
+    解锁
+    数据锁定
+    数据锁定，锁定后数据将无法编辑
+    同时锁定从对象的数据
+    数据解锁，数据将可编辑
+    同时解锁从对象的数据
+    数据锁定
+    数据解锁
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/action/manager/manager.html
+    分配给：
+    支持选择多个员工，提交时依次分配。
+    例如：设置分配给员工ABC，当第一条数据产生时分配给A；第二条分配给B；第三条分配给C； 第四条分配给A，依次类推。
+    特殊说明：公海和线索池的数据不支持工作流分配负责人。
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/action/manager/manager.js
+    分配负责人
+    更换负责人
+    负责人
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/action/operator/components/clues/clues.html
+    退回其所属{{data.dataLabel}}
+    退回到指定{{data.dataLabel}}
+    退回到指定{{data.dataLabel}}：
+    请选择目标{{data.dataLabel}}
+    不执行退回操作
+    不执行退回操作
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/action/operator/components/clues/clues.js
+    `请选择目标${cluesData.dataLabel}`
+    `请选择目标${cluesData.dataLabel}`
+    线索池
+    公海
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/action/operator/operator.html
+    当数据有所属{{data.dataLabel}}时：
+    当数据无所属{{data.dataLabel}}时：
+    选择目标{{data.dataLabel}}：
+    选择操作类型：
+    选择退回原因：
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/action/operator/operator.js
+    数据操作
+    线索池
+    公海
+    退回
+    转移
+    退回原因
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/common/api/api.js
+    服务器内部错误！
+    客户端错误！
+    负责人所在主部门
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/common/base/base.js
+    `请填写${label}`
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/common/base/function_r.js
+    ，
+    ，
+    ，
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/common/card/card.js
+    `其所属${label}`
+    ，
+    已删除
+    已删除
+    该类型已被删除
+    该类型已被删除
+    该函数已删除
+    ，
+    ，
+    ，
+    ，
+    ，
+    且
+    当
+    且
+    请选择
+    或
+    未设置条件，默认为真
+    ，
+    ，
+    ，
+    ，
+    流程被禁用或删除
+    线索
+    公海
+    退回原因已被删除
+    数据锁定，锁定后数据将无法编辑
+    数据解锁，数据将可编辑
+    ，
+    ，
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/common/card/template/bpmtpl.html
+    触发BPM流程：{{data.sourceworkflowName}}
+    发起业务流程
+    节点完成后
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/common/card/template/emailtpl.html
+    邮件
+    发件人
+    收件人
+    邮件模板
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/common/card/template/feedtpl.html
+    销售记录
+    内容
+    类型
+    抄送范围
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/common/card/template/fieldtpl.html
+    字段变更
+    节点完成后
+    变更为
+    、
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/common/card/template/functiontpl.html
+    自定义函数
+    函数名称
+    函数描述
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/common/card/template/managertpl.html
+    分配给：{{data.person}}
+    分配给负责人
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/common/card/template/messagetpl.html
+    外部通知
+    标题
+    内容
+    提醒人员
+    下游企业匹配的字段
+    外部角色
+    跳转链接
+    互联应用
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/common/card/template/operatetpl.html
+    到{{data.actionName}}
+    当数据有所属{{data.dataLabel}}时，退回到{{data.belongTo}}
+    当数据无所属{{data.dataLabel}}时
+    退回到{{data.unBelongTo}}
+    退回原因：{{data.reason}}
+    转移
+    退回
+    不执行退回操作
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/common/card/template/remindtpl.html
+    CRM提醒
+    标题
+    内容
+    提醒人员
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/common/card/template/scheduletpl.html
+    开始时间：{{data.beginTimeString}}
+    结束时间：{{data.endTimeString}}
+    日程
+    内容
+    参与人
+    全天日程
+    提醒
+    回执人员
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/common/card/template/tasktpl.html
+    任务
+    标题
+    内容
+    截至日期
+    分配给谁
+    抄送范围
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/common/constants/constants.js
+    线索
+    客户
+    联系
+    产品
+    回款
+    退款
+    商机
+    开票
+    订单
+    拜访
+    合同
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/common/dialog/dialog.js
+    保 存
+    取 消
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/common/fieldSelect/select.js
+    该字段已被禁用
+    该字段可能已被删除
+    该字段已被禁用
+    该字段已被删除
+    请选择
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/common/utils/utils.js
+    (circle.name + '负责人');
+    系统
+    分配给：
+    分配给
+    分配给：
+    ，
+    ，
+    外部负责人
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/common/variables/variables.html
+    运算符
+    公式中数值为空时
+    默认为空
+    默认为零
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/common/variables/variables.js
+    业务流程
+    业务流程
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/entrance/circle/circle.js
+    = val + '日';
+    `${value}日`
+    每月最后一天
+    每天
+    每周
+    每月
+    周几
+    周一
+    周二
+    周三
+    周四
+    周五
+    周六
+    周日
+    每月最后一天
+    请选择
+    每月最后一天
+    请选择日期
+    请选择触发类型
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/entrance/entrance.html
+    基本信息
+    工作流名称
+    API名称
+    工作流描述
+    在什么对象下触发？
+    请选择对象
+    何时触发此工作流？
+    触发操作
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/entrance/entrance.js
+    新建工作流
+    工作流名称
+    请输入
+    API名称
+    请输入
+    工作流描述
+    请输入最多500字
+    提示
+    确定
+    API名称重复，请重新填写
+    API名称不能输入中文字符，请重新填写
+    对象
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/entrance/radio/radio.html
+    选择日期或时间的字段后，可配置在其之前
+    之后的小时、天、周、月，触发执行工作流。
+    关闭
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/entrance/time/time.html
+    点击选择时间
+    小时
+    确定
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/entrance/time/time.js
+    请选择执行时间
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/entrance/timetrigger/timetrigger.html
+    请选择触发时间
+    执行时间
+    循环次数
+    是否作用于历史数据
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/entrance/timetrigger/timetrigger.js
+    : i + '点',
+    否
+    是
+    新建、更新流程定义当天凌晨会匹配历史数据，满足条件会生成待办任务
+    历史数据
+    小时
+    天
+    周
+    月
+    单位
+    当前日期时间
+    每月最后一天
+    字段
+    之前
+    之后
+    时间
+    仅执行一次
+    每天
+    每周
+    每月
+    每年
+    循环次数
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/flowdetail/flowdetail.html
+    开始
+    配置错误
+    配置错误
+    结束
+    匹配下一条件
+    结束
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/flowdetail/flowdetail.js
+    `分配给：${label}`
+    负责人所在主部门
+    分配给
+    分配给：
+    ，
+    ，
+    ，
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/flowinfo/flowinfo.html
+    触发条件
+    当
+    、
+    时，触发此工作流。
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/node/components/nodeaction/nodeaction.html
+    立即执行的活动
+    添加
+    邮件通知
+    CRM提醒
+    字段变更
+    数据操作
+    发起业务流程
+    数据锁定
+    解锁
+    分配负责人
+    新建任务
+    新建日程
+    新建销售记录
+    执行自定义函数
+    新建外部通知
+    暂无立即执行的活动
+    必须添加立即执行的活动
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/node/components/nodeaction/nodeaction.js
+    确认删除该动作？
+    提示
+    提示
+    确定
+    最多填加10个后动作
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/node/components/nodetrigger/nodetrigger.html
+    条件名称
+    条件配置
+    添加
+    未配置条件，默认为真
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/node/components/nodetrigger/nodetrigger.js
+    条件名称
+    添加
+    且
+    当
+    且
+    请选择
+    或
+    编辑
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/node/node.html
+    配置错误
+    配置错误
+    结束
+    匹配下一条件
+    结束
+    匹配下一条件
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/node/node.js
+    匹配下一条件
+    结束
+    结束
+    匹配下一条件
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/setting/setting.html
+    开始
+    结束
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/setting/setting.js
+    `条件${next}`
+    `条件${num}`
+    `结束`
+    `最多添加${this.maxNum}个条件，不能继续添加`
+    负责人所在主部门
+    该条件
+    并
+    和
+    该
+    立即执行的活动
+    并
+    已配置，
+    已匹配下一条件，
+    确定
+    取消
+    确认删除吗？
+    立即执行的活动
+    确定
+    提示
+    保存流程
+    立即启用
+    暂不启用
+    流程已保存，是否立即启用本工作流
+    提示
+    确 定
+    取 消
+    确认关闭吗？

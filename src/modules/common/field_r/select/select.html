@@ -1,0 +1,36 @@
+## var readonlyCls = data.readonly ? ' bpm-readonly' : '' ;##
+##var error = data.isActive ? ' process-selector-error': ''##
+## var val = '请选择'; ##
+<div class="bpm-select_one{{readonlyCls}}">
+    <ul class="options select-list"> 
+        ##if(!data.boolean){##
+            <li data-value="-1" data-label='请选择'>请选择</li>
+        ##}##
+        ## _.each(data.options, function(option) { ##
+
+            ##var fval = option.value;##
+        ##if(typeof fval ==='undefined' || fval===''){ fval=option.api_name;}##
+
+            ## if (fval == data.value) { ##
+                ## val = option.label; ##
+            ## } ##
+            
+            ##if(data.filterOptions && data.filterOptions.length){##
+                 ##if(data.filterOptions.indexOf(option.value) == -1){##
+                <li data-value="{{fval}}" data-label={{option.label}} data-isActive={{option.isActive}}>{{{{-option.label}}}}</li>
+                ##}##           
+            ##}else{##
+                <li data-value="{{fval}}" data-label={{option.label}} data-isActive={{option.isActive}}>{{{{-option.label}}}}</li>
+            ##}##
+
+        ## }); ##
+        ##if(data.value!=='' && data.value!=='-1'){##
+            ##if(!data.options || !data.options.length || val=='请选择' ){##
+                 ## val = data.value; ##
+            ##}##
+        ##}##
+    </ul>
+    <div class="bpm-text">
+        <input type="text" readonly="readonly" value="{{val}}"/>
+    </div>
+</div>

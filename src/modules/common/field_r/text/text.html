@@ -1,0 +1,4 @@
+## var readonlyCls = data.readonly ? ' bpm-readonly' : '' ;##
+<div class="bpm-text{{readonlyCls}}">
+    <input type="text" value="{{{{-data.value}}}}" ##if(!(typeof(data.label) == 'string' && data.label.indexOf('${') > -1)){## placeholder="请填写{{{{-data.label}}}}" ##}## ##if(data.readonly) {## readonly="readonly" ##}## />
+</div>

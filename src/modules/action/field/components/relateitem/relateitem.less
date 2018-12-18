@@ -1,0 +1,120 @@
+.workprocess-form .relate-field{
+  	position: relative;
+  	width:590px;
+	min-height:35px;
+	margin-bottom:22px;
+	clear:both;
+	.relate-del{
+		float:left;
+		display:inline-block;
+		width:18px;
+		height:18px;
+		border:1px solid #ddd;
+		border-radius:50%;
+		background-color:#fff;
+		margin:6px 15px 0 0;
+		-webkit-box-sizing:border-box;
+		box-sizing:border-box;
+		cursor:pointer;
+	}
+	.relate-del:before{
+		  width:8px;
+		  height:2px;
+		  background-color:#ccc;
+		  margin:-4px 0 0 4px;
+		  content:"";
+		  display:inline-block;
+		  vertical-align:middle;		
+	}
+	.relate-del:hover{
+	  	background-color:#f5715f;
+	}
+	.relate-del:hover:before{
+	  	background-color:#fff;
+	}
+
+	.relate-field-select{
+		position:relative;
+		float:left;
+		width:200px;
+		.error-msg{
+			color:#f5715f;
+			line-height:25px;
+		}
+	}
+	.relate-field-text{
+		float:left;
+		width:60px;
+		color:#666;
+		line-height:30px;
+		text-align:center;
+	}
+	.relate-update-select, .relate-update-select-cal{
+		float:left;
+		width:200px;
+		.process-date-con{
+			position:relative;
+		}
+		.default-input {
+		    padding: 0 10px;
+		    display: inline-block;
+		    -webkit-box-sizing: border-box;
+		    box-sizing: border-box;
+		    width: 200px;
+		    border: 1px solid #ddd;
+		    border-radius: 3px;
+		    overflow: hidden;
+		    background-color: #f7f7f7;
+		    color: #ccc;
+		    white-space: nowrap;
+		    text-overflow: ellipsis;
+		}
+		.error{
+			position:absolute;
+			top:38px;
+			left:0;
+			color:#f5715f;
+		}
+		.error-msg{
+			color:#f5715f;
+			line-height:25px;
+		}
+		.error.normal{
+			color:#999;
+		}
+		.error::before{
+			float:left;
+			width:17px;
+			height:17px;
+			display:inline-block;
+			background:url(../../assets/images/all2@2x.png) no-repeat 0 -43px;
+			background-size:71px auto;
+			content:'';
+			margin:0 3px 0 0;					
+		}
+		.error.normal::before{
+			width:0px;
+			background:none;
+		}
+	}
+	.relate-update-select-cal{
+		display:none;
+	}
+	.config-field-link{
+        position: absolute;
+        top: 8px;
+        right: 100px;
+        width:18px;
+        height:18px;
+        border-radius: 2px;
+        cursor:pointer;
+        display:none;
+        background: url('@{images-sprite}/setting.png');
+        margin-top:0;
+	}
+	.flow-date .span-close{
+		width:16px;
+		height:16px;
+		right:23px;
+	}
+}

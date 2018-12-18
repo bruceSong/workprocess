@@ -1,0 +1,121 @@
+
+.wf-detail-card{
+    position:absolute;
+    left:0;
+    top: 45px;
+    padding-top: 8px;     
+    width:252px;
+    max-height:300px;
+    overflow-y:auto;
+    overflow-x:hidden;    
+    line-height:22px;
+    text-align:left;
+    font-size:12px;
+    border-radius:4px;
+    background-color:#fff;
+    box-shadow:0 14px 28px 0 rgba(33,43,54,.15),0 10px 10px 0 rgba(33,43,54,.05);
+    padding:0 24px 10px;
+    z-index:3;
+    display:none;
+    .workprocess-action-card{
+        padding:7px 0 7px 0;
+    }
+    .no-condition{
+      height:20px;
+      line-height:20px;
+      border-radius:2px;
+      font-size:14px;
+      text-align:center;
+    }
+    .con-p{
+        line-height:35px;
+        font-size: 12px;
+        color: #49525c;
+        overflow:hidden;
+        .tg-info{
+            float:left;
+            width:50px;
+            font-weight: normal;
+            margin-right:8px;
+        }
+        
+        .tg-info1{
+            float:left;
+            width:50px;
+            font-weight: normal;
+            margin:0 8px;
+        }
+        .tg-txt{
+            float:left;
+            width:60px;
+            height:30px;
+            color: #49525c;
+            display:inline-block;  
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            i{
+                color:#f5715f;
+                font-style:normal;
+            }
+        }
+    }
+    .or-con{
+        width: 272px;
+        height: 25px;
+        line-height:25px;
+        border-bottom:1px solid #eee;
+        margin:0 auto 20px auto;        
+    }
+    .done-title{
+        font-weight:bold;
+        height:25px;
+        line-height:25px;
+        margin-bottom:5px;
+    }
+    h3{
+        color: #22262a;
+        height:25px;
+        line-height:25px;
+        .action-close{
+            display:none;
+        }
+    }
+    .remind-text{
+        h4{
+            color: #919eab;
+            height:22px;
+            line-height:22px;
+            font-weight:bold;
+        }
+        p{
+            font-weight: normal;
+            color: #49535c;
+            line-height:22px;
+            margin-bottom:3px;
+            word-break:break-all;
+            .var-span{
+                color: #919eab;
+                margin:0 6px;
+            }
+            i{
+                color:#f5715f;
+                font-style:normal;
+            }
+        }
+    }
+    .wk-remind-content, .wk-manager-content, .wk-field-content, .wk-bpm-content, .wk-operate-content, .wk-email-content, .wk-lock-content,.wk-task-content,.wk-schedule-content,.wk-feed-content,.wk-wechat-content,.wk-function-content{
+        background:#f8f8fa;
+        padding:12px 12px 8px;
+        margin:15px 0 0 0;
+        cursor:pointer;
+        .bpm-vars{
+            color: #319f63;
+            margin:0 2px;
+        }
+        .bpm-error{
+            color: #f5715f;
+            margin:0 2px;
+        }
+    }  
+}

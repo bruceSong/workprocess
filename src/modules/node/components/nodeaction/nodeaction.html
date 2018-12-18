@@ -1,0 +1,29 @@
+<div class="wk-node-action">
+	<h2><span class="left">{{$t('立即执行的活动')}}</span>	
+		<div class="node-action-add-div">
+			<span class="node-action-add-btn">{{$t('添加')}}</span>
+			<ul>
+				<li data-action="email">{{$t('邮件通知')}}</li>
+				<li data-action="remind">{{$t('CRM提醒')}}</li>
+				##if(data.rule.triggerTypes.indexOf(3) == -1){##
+					<li data-action="field">{{$t('字段变更')}}</li>
+					##if(['AccountObj','LeadsObj'].indexOf(data.entityId) > -1){##
+					<li data-action="operate">{{$t('数据操作')}}</li>
+					##}##
+					<li data-action="bpm">{{$t('发起业务流程')}}</li>
+					<li data-action="lock">{{$t('数据锁定')}}/{{$t('解锁')}}</li>
+					<li data-action="manager" >{{$t('分配负责人')}}</li>
+				##}##
+				<li data-action="task">{{$t('新建任务')}}</li>
+				<li data-action="schedule">{{$t('新建日程')}}</li>
+				<li data-action="feed" >{{$t('新建销售记录')}}</li>
+				<li data-action="function" >{{$t('执行自定义函数')}}</li>
+				<li data-action="wechat" >{{$t('新建外部通知')}}</li>
+			</ul>
+		</div>
+	</h2>
+	<div class="no-data">{{$t('暂无立即执行的活动')}}</div>
+	<div class="no-error-data">{{$t('必须添加立即执行的活动')}}</div>
+	<div class="wk-action-content"></div>
+
+</div>

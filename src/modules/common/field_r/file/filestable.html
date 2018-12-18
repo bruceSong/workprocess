@@ -1,0 +1,20 @@
+## if (fileList.length) { ##
+    <table>
+        <thead>
+            <tr>
+                <th class="name">附件名称</th>
+                <th class="size">文件大小</th>
+                <th class="handle">操作</th>
+            </tr>
+        </thead>
+        <tbody class="tbody">
+            ## _.each(fileList, function(file) { ##
+                <tr>
+                    <td class="name"><span style="margin-right:10px" class="crm-ico-file crm-ico-unknown"></span>{{{{-file.filename}}}}</td>
+                    <td class="size">{{{{-file.size}}}}KB</td>
+                    <td class="handle"><a class="j-attach-del" href="javascript:;" data-path="{{{{-file.path}}}}">删除</a></td>
+                </tr>
+            ## }); ##
+        </tbody>
+    </table>
+## } ##

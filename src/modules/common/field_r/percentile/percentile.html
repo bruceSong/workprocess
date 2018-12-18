@@ -1,0 +1,5 @@
+## var readonlyCls = data.readonly ? ' bpm-readonly' : '' ;##
+<div class="bpm-percentile bpm-text{{readonlyCls}}">
+    <input type="text" value="{{{{-data.value}}}}" ##if(data.readonly) {## readonly="readonly" ##}##>
+    <div class="percentitle-code">%</div>
+</div>

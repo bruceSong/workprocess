@@ -1,0 +1,25 @@
+## var readonlyCls = data.readonly ? ' bpm-readonly' : '' ;##
+<div class="bpm-multi-select">
+    <div class="bpm-select_one level-one{{readonlyCls}}">
+        <ul class="options select-list">
+            ##_.each(data.options, function(option) { ##
+                <li data-value="{{{{-option.value}}}}" data-label={{option.label}}>{{{{-option.label}}}}</li>
+            ## }); ##
+        </ul>
+        <div class="bpm-text">
+            <input type="text" readonly="readonly" value="{{{{-data.curSupOption.label}}}}"/>
+        </div>
+    </div>
+    <div class="bpm-select_one level-two{{readonlyCls}}">
+        <ul class="options select-list">
+            ##if (data.curSupOption && data.curSupOption.child_options) { ##
+                ##_.each(data.curSupOption.child_options, function(subOption) { ##
+                    <li data-value="{{{{-subOption.value}}}}" data-label={{subOption.label}}>{{{{-subOption.label}}}}</li>
+                ## }); ##
+            ## } ##
+        </ul>
+        <div class="bpm-text">
+            <input type="text" readonly="readonly" value="{{{{-data.curSubOption.label}}}}"/>
+        </div>
+    </div>
+</div>

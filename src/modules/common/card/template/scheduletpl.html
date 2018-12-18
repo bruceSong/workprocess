@@ -1,0 +1,24 @@
+<div class="wk-schedule-content ##if(data.isError){## error-action ##}##">
+    <h3 data-action="schedule" num="{{data.num}}">{{$t('日程')}}<a class="action-close" href="#"></a>
+        <a href="#" class="action-edit"></a>
+    </h3>
+    <div class="remind-text">
+        <h4>{{$t('内容')}}</h4>
+        <p>{{data.content}}</p>
+        <h4>{{$t('参与人')}}</h4>
+        <p>{{data.person}}</p>
+        ##if (data.allDay) {##
+        <p>{{$t('全天日程')}}</p>
+        ##}##
+        <p>{{$t('开始时间：')}}{{data.beginTimeString}}</p>
+        ##if (data.endTimeString) {##
+        <p>{{$t('结束时间：')}}{{data.endTimeString}}</p>
+        ##}##
+        <h4>{{$t('提醒')}}</h4>
+        <p>{{data.remindArr.join(',')}}</p>
+        ##if (data.receiptEmployeeIds) {##
+        <h4>{{$t('回执人员')}}</h4>
+        <p>{{data.receiptEmployeeIdsStr}}</p>
+        ##}##
+    </div>
+</div>
