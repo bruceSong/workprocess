@@ -1,0 +1,37 @@
+{
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "ignore": [
+    "**/libs/*.*"
+  ],
+  "globals": {
+    "_": true,
+    "$": true,
+    "jQuery": true,
+    "Backbone": true,
+    "seajs": true,
+    "define": true,
+    "FS": true,
+    "describe": true,
+    "it": true,
+    "beforeEach": true,
+    "afterEach": true,
+    "before": true,
+    "after": true,
+    "chai": true,
+    "mocha": true,
+    "PaasUI": true,
+    "$t":true
+  },
+  "plugins": [],
+  "extends": [
+    "eslint:recommended"
+  ],
+  "rules": {
+    "no-console": 0,
+    "no-debugger": 0
+  }
+}
