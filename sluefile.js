@@ -8,7 +8,6 @@ const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const del = require('del');
 const delEmpty = require('delete-empty');
-const i18nTools = require('@tools/i18n');
 
 const args = process.argv;
 const app_name = 'paas-workprocess';
@@ -557,46 +556,3 @@ buildTasks = buildTasks.concat(concatJS, [
     'tpl-config'
 ]);
 slue.task('build', $.sequence(buildTasks));
-
-slue.task("outputChineseList", function() {
-    var exts = ['.js', '.html'];
-    var excludedDirs = [path.join(__dirname, './src/tpls'), '*-tpl.js', 'd3.min.js'];
-    var entryPath = path.join(__dirname, './src');
-    var outputPath = path.join(__dirname, './src/chinese_output.text');
-    var excelPath = path.join(__dirname, './src/chinese_output.xls');
-    var moduleName = 'bpm';
-
-    //查找代码中出现的汉字 并将其输出到指定文件
-    i18nTools.outputChineseList({
-        entryPath, //入口目录
-        outputPath, // 汉字列表输出目录 
-        exts, // 要处理的文件后缀
-        excludedDirs,
-        excelPath,
-        moduleName,
-        success: function() { //完成后回调函数
-            console.log('输出完毕！!');
-        }
-    });
-});
-
-slue.task("replaceChinese", function() {
-    var exts = ['.js', '.html'];
-    var excludedDirs = [path.join(__dirname, './src/tpls'), '*-tpl.js'];
-    var entryPath = path.join(__dirname, './src');
-    var outputPath = path.join(__dirname, './dictionary/chinese_output.text');
-    // 汉字 和 国际化标识 对应关系'字典'路径
-    var dictionaryPath = path.join(__dirname, './dictionary/zh-cn.json');
-
-    //执行替换
-    i18nTools.replaceChinese({
-        entryPath, //入口目录
-        outputPath, // 汉字列表输出目录
-        exts, // 要处理的文件后缀
-        excludedDirs,
-        dictionaryPath,
-        success: function() { //完成后回调函数
-            console.log('替换完毕！!');
-        }
-    });
-});
