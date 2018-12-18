@@ -21,7 +21,6 @@
     "author": "firstshare",
     "license": "ISC",
     "devDependencies": {
-        "@tools/i18n": "^1.4.5",
         "autoprefixer": "^6.5.1",
         "babel-preset-es2015": "^6.16.0",
         "cssnano": "^3.7.5",
