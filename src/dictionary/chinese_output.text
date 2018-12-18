@@ -1,0 +1,49 @@
+
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/flowsetting.js
+  工作流
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/action/field/components/relateitem/relateitem.js
+  的上级字段
+  没有填写完整
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/action/lock/lock.js
+  数据锁定
+  解锁
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/action/operator/components/clues/clues.js
+  请选择目标
+  请选择目标
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/common/base/base.js
+  请填写
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/common/card/card.js
+  或
+  其所属
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/action/operator/operator.html
+  当数据有所属
+  时：
+  当数据无所属
+  时：
+  选择目标
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/action/operator/components/clues/clues.html
+  
+				退回其所属
+  
+				退回到指定
+  退回到指定
+  请选择目标
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/common/card/template/operatetpl.html
+  到
+  当数据有所属
+  时，退回到
+  
+				当数据无所属
+  
+				退回到
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/entrance/timetrigger/timetrigger.js
+  是
+  新建、更新流程定义当天凌晨会匹配历史数据，满足条件会生成待办任务
+  点
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/node/components/nodetrigger/nodetrigger.js
+  或
+/Users/songgenlei/workspace/fxiaoke/paas/workprocess/src/modules/setting/setting.js
+  条件
+  条件
+  最多添加
+  个条件，不能继续添加
